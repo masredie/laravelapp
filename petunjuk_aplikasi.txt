@@ -1,0 +1,35 @@
+LaravelApp
+----------
+http://localhost/laravelapp/
+atau
+http://localhost/laravelapp/public/
+
+1. Copy-kan folder laravelapp ke web server Anda (folder www atau htdocs).
+
+2. Tambahkan Virtual Host di Apache:
+
+<VirtualHost *:80>
+DocumentRoot C:/wamp/www/laravelapp/public    
+ServerName laravelapp.dev
+</VirtualHost>
+
+3.  Tambahkan entry berikut di file C:/Windows/System32/drivers/etc/hosts
+127.0.0.1       laravelapp.dev
+
+4.  Import File databasenya (db_laravelapp.sql)
+
+5.  Menjalankan aplikasi: 
+http://localhost/laravelapp/public/          (all user)
+http://localhost/laravelapp/public/siswa     (all user)
+http://localhost/laravelapp/public/about     (all user)
+http://localhost/laravelapp/public/kelas     (operator / admin)
+http://localhost/laravelapp/public/hobi      (operator / admin)
+http://localhost/laravelapp/public/user      (admin)
+
+6.  Login:
+
+Username                    Password                Level
+-----------------------------------------------------------------------
+admin@laravelapp.dev        adminpassword           admin
+operator@laravelapp.dev     operatorpassword        operator
+taylor@laravelapp.dev       taylorpassword          operator
